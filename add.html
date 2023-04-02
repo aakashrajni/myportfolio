@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .primaryInput {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" id="numberOne" class="primaryInput" min="1" max="10"/>
+    <span>+</span>
+    <input type="number" id="numberTwo"  min="1" max="10"/>
+    <span>=</span>
+    <input id="result"/>
+    <br />
+    <button onclick="addTwoNumbers()">add</button>
+    <script>
+      function addTwoNumbers() {
+        let a = document.getElementById("numberOne").value;
+        let b = document.getElementById("numberTwo").value;
+        document.getElementById("result").value = Number(a) + Number(b);
+      }
+    </script>
+  </body>
+</html>

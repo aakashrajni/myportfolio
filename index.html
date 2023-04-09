@@ -26,9 +26,71 @@
         background-color: #f85c70;
         border-color: #f85c70;
       }
+      .headerStyle {
+        background-image: linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)),url("./header.jpg");
+        background-size: cover;
+        color: white;
+        height: 600px;
+        position: relative;
+      }
+      .header-subtitle {
+        font-weight: 200;
+        font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
+        margin: 10px 0px;
+      }
+      .header-title {
+        font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
+        font-weight: 700;
+        line-height: 0.7;
+        margin-bottom: 25px;
+        color: inherit;
+        margin: 10px 0px;
+      }
+      .header-desc {
+        letter-spacing: 5px;
+        font-weight: 500;
+        font-size: calc(12px + (19 - 12) * ((100vw - 300px) / (1600 - 300)));
+        margin-bottom: 40px;
+      }
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: 93px;
+        margin-left: 93px;
+      }
+      .listStyle {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 180px;
+        padding-top: 20px;
+      }
+      .listMenu {
+        height: 27px;
+        width: 27px;
+        font-size: xx-large;
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-content {
+        width: 100%;
+        position: absolute;
+        left: 10%;
+        top: 60%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        color: #fff;
+      }
     </style>
   </head>
-  <body style="padding: 60px">
+  <body style="margin: 0">
     <!-- <body style="background-color: blue;padding: 20px"> -->
     <!-- <button
       type="button"
@@ -133,11 +195,33 @@
     github review
     git merge
     git conflict -->
-
-
-    <div> 
-      <p>riyaz</p>
-    </div>
-    
+      <div style="height: 200px;"></div>
+    <header class="headerStyle">
+      <div class="container">
+        <ul class="listStyle">
+          <li class="listMenu">t</li>
+          <li class="listMenu">f</li>
+          <li class="listMenu">g</li>
+          <li class="listMenu">i</li>
+          <li class="listMenu">g</li>
+        </ul>
+        <div class="header-content">
+          <h4 class="header-subtitle">Hello, I am</h4>
+          <h1 class="header-title">John Doe</h1>
+          <h6 class="header-desc">Frond end Designer | Developer</h6>
+          <button class="primaryButton" type="button">Print Resume</button>
+        </div>
+      </div>
+    </header>
+    <nav></nav>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <div></div>
+    <footer></footer>
   </body>
 </html>

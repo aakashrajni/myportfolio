@@ -31,7 +31,12 @@
         border-color: #f85c70;
       }
       .headerStyle {
-        background-image: linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)),url("./header.jpg");
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url("./header.jpg");
         background-size: cover;
         color: white;
         height: 600px;
@@ -92,9 +97,101 @@
         transform: translateY(-50%);
         color: #fff;
       }
+      /* sample css for overlay animation(not used in this webpage code) */
+      .portfolio-card-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-image: linear-gradient(
+          to top,
+          #e1dfed 0,
+          rgba(225, 223, 237, 0.7) 99%,
+          rgba(225, 223, 237, 0.8) 100%
+        );
+        transition: all, 0.3s;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
+      .custom-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s;
+        font-family: "Baloo Paaji", cursive;
+      }
+      .custom-navbar .container {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        min-height: 100px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s;
+      }
+      .custom-navbar .nav {
+        list-style-type: none;
+        color: white;
+        display: flex;
+      }
+      .logo {
+        font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1300 - 300)));
+        text-decoration: none;
+        color: #fff;
+      }
+      .custom-navbar .nav .item .link {
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .custom-navbar .nav .item{
+        margin: 0px 10px;
+      }
     </style>
   </head>
   <body style="margin: 0">
+    <nav class="custom-navbar" style="background-color: blue">
+      <div class="container">
+        <a class="logo" href="https://www.free-css.com/free-css-templates"
+          >Meyawo</a
+        >
+        <ul class="nav">
+          <li class="item"><a class="link" href="#home">Home</a></li>
+          <li class="item"><a class="link" href="#about">About</a></li>
+          <li class="item"><a class="link" href="#portfolio">Portfolio</a></li>
+          <li class="item">
+            <a class="link" href="#testimonial">Testimonial</a>
+          </li>
+          <li class="item"><a class="link" href="#blog">Blog</a></li>
+          <li class="item"><a class="link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
     <!-- <body style="background-color: blue;padding: 20px"> -->
     <!-- <button
       type="button"
@@ -199,7 +296,7 @@
     github review
     git merge
     git conflict -->
-      <div style="height: 200px;"></div>
+    <div style="height: 200px"></div>
     <header class="headerStyle">
       <div class="container">
         <ul class="listStyle">
@@ -218,7 +315,7 @@
       </div>
     </header>
     <nav></nav>
-    <section></section>
+    <section id="home">test home</section>
     <section></section>
     <section></section>
     <section></section>

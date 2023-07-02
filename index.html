@@ -135,6 +135,10 @@
         -webkit-transition: all, 0.3s;
         transition: all, 0.3s;
         font-family: "Baloo Paaji", cursive;
+        background-color: blue;
+      }
+      .color {
+        background-color: white;
       }
       .custom-navbar .container {
         -webkit-box-flex: 1;
@@ -159,23 +163,34 @@
         color: white;
         display: flex;
       }
-      .logo {
+
+      .custom-navbar .logo {
         font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1300 - 300)));
         text-decoration: none;
         color: #fff;
+      }
+      .custom-navbar.color .logo {
+        font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1300 - 300)));
+        text-decoration: none;
+        color: black;
       }
       .custom-navbar .nav .item .link {
         color: #fff;
         font-weight: 500;
         text-decoration: none;
       }
-      .custom-navbar .nav .item{
+      .custom-navbar.color .nav .item .link {
+        color: black;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .custom-navbar .nav .item {
         margin: 0px 10px;
       }
     </style>
   </head>
   <body style="margin: 0">
-    <nav class="custom-navbar" style="background-color: blue">
+    <nav id="nav-bar" class="custom-navbar">
       <div class="container">
         <a class="logo" href="https://www.free-css.com/free-css-templates"
           >Meyawo</a
@@ -315,7 +330,10 @@
       </div>
     </header>
     <nav></nav>
-    <section id="home">test home</section>
+    <section id="home" style="height: 100px">test home</section>
+    <section id="home" style="height: 100px">test home</section>
+    <section id="home" style="height: 100px">test home</section>
+    <section id="home" style="height: 100px">test home</section>
     <section></section>
     <section></section>
     <section></section>
@@ -324,5 +342,18 @@
     <section></section>
     <div></div>
     <footer></footer>
+    <script>
+      const nav = document.getElementById("nav-bar");
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop >= 200 ||
+          document.documentElement.scrollTop >= 200
+        ) {
+          nav.classList.add("color");
+        } else {
+          nav.classList.remove("color");
+        }
+      };
+    </script>
   </body>
 </html>

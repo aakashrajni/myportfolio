@@ -187,6 +187,29 @@
       .custom-navbar .nav .item {
         margin: 0px 10px;
       }
+      .hamburgerMenu {
+        width: 30px;
+        height: 21px;
+      }
+      .hamburgerMenuLine {
+        background-color: white;
+        width: 100%;
+        height: 3px;
+        border-radius: 1.5px;
+        transition: all, 0.3s;
+      }
+      .hamburgerMenu.active .hamburgerMenuLine:nth-child(2) {
+        display: none;
+        transition: all, 0.3s;
+      }
+      .hamburgerMenu.active .hamburgerMenuLine:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+        transition: all, 0.3s;
+      }
+      .hamburgerMenu.active .hamburgerMenuLine:nth-child(3) {
+        transform: rotate(-45deg) translateY(-7px);
+        transition: all, 0.3s;
+      }
     </style>
   </head>
   <body style="margin: 0">
@@ -205,6 +228,11 @@
           <li class="item"><a class="link" href="#blog">Blog</a></li>
           <li class="item"><a class="link" href="#contact">Contact</a></li>
         </ul>
+        <div id="menuBar" class="hamburgerMenu" onclick="menuBarClick();">
+          <div class="hamburgerMenuLine" style="margin-bottom: 6px"></div>
+          <div class="hamburgerMenuLine" style="margin-bottom: 6px"></div>
+          <div class="hamburgerMenuLine"></div>
+        </div>
       </div>
     </nav>
     <!-- <body style="background-color: blue;padding: 20px"> -->
@@ -354,6 +382,16 @@
           nav.classList.remove("color");
         }
       };
+      function menuBarClick() {
+        console.log("menu bar");
+
+        const menuBar = document.getElementById("menuBar");
+        if (menuBar.classList.contains("active")) {
+          menuBar.classList.remove("active");
+        } else {
+          menuBar.classList.add("active");
+        }
+      }
     </script>
   </body>
 </html>
